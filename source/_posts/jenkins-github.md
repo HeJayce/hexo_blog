@@ -25,11 +25,7 @@ Jenkins可以监控github的动作，设置当代码push后，Jenkins监控到�
 
 
 
-## 准备工作
-
-Jenkins在关联Github前，需要准备好Hook，这个Hook
-
-## 添加Github
+## 获取hook
 
 在安装Jenkins时，已经默认安装了github的插件，首先需要配置全局的github，在管理Jenkins中点击Configure System，进入设置。这里的入口与其他博客可能会有不同，请根据自己安装的Jenkins版本自行判断
 
@@ -39,13 +35,13 @@ Jenkins在关联Github前，需要准备好Hook，这个Hook
 
 ![image-20220205131557625](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202051315820.png)
 
-### 准备工作
-
 Jenkins在关联Github前，需要准备好Hook，这个Hook需要点击高级，找到为 Github 指定另外一个 Hook URL，勾选这个CheckBox（一时想不起来中文叫啥了)，获取到这个URL
 
 ![image-20220205132303844](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202051323334.png)
 
 ![image-20220205132229972](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202051323137.png)
+
+## github添加hook
 
 到github，选择需要同步的项目，进入设置界面，点击Webhooks
 
@@ -67,6 +63,8 @@ Jenkins在关联Github前，需要准备好Hook，这个Hook需要点击高级�
 
 ![image-20220205133125556](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202051331682.png)
 
+## 生成sercret text
+
 添加好后，先别急关掉，此时还需要生成一个sercret text，进入github的设置，进入Developer setting，选择Personal Access Token 点击 Generate new token
 
 ![image-20220205133943847](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202051339773.png)
@@ -77,7 +75,7 @@ Jenkins在关联Github前，需要准备好Hook，这个Hook需要点击高级�
 
 生成即可
 
-
+## Jenkins配置github
 
 返回Jenkins，这里的名称可以随便写
 
@@ -99,13 +97,15 @@ API URL保持默认https://api.github.com就行
 
 最后保存
 
-
+## 创建项目
 
 回到主界面，新建一个项目，![image-20220205134552671](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202051345969.png)
 
 名称自己填，项目类型选择第一个Freestyle project![image-20220205134639318](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202051346408.png)
 
 点击确定添加
+
+## 配置github仓库
 
 进入配置界面，选择Github项目，填写仓库地址
 
@@ -127,7 +127,7 @@ API URL保持默认https://api.github.com就行
 
 ![image-20220205135438447](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202051354450.png)
 
-最后点击保存即可，此时党徽项目界面，点击立即构建，Jenkins就会把仓库代码clone下来，当出现绿色对勾即表示正常，前面的叉都是踩的坑，搞到4点多，终于搞定了
+最后点击保存即可，此时返回项目界面，点击立即构建，Jenkins就会把仓库代码clone下来，当出现绿色对勾即表示正常，前面的叉都是踩的坑，搞到4点多，终于搞定了
 
 ![image-20220205135614058](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202051356625.png)
 
