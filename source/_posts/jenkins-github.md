@@ -10,7 +10,8 @@ tags:
   - Jenkins
   - github
   - 阿里云
-  - hexo 
+  - hexo
+  - linux
 ---
 
 # 在服务器部署Jenkins同步github代码

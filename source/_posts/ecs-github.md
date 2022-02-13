@@ -12,6 +12,7 @@ tags:
   - github
   - 阿里云
   - v2ray
+  - linux
 ---
 
 # 阿里云等国内服务器github加速
