@@ -148,6 +148,7 @@ socials:
   juejin: 'https://juejin.cn/user/1873223546578589'
 
 authors:
+  ##! example
   Jayce:
     name: Jayce
     avatar: https://up.enterdesk.com/edpic_source/44/ff/3d/44ff3d6bd2819d524facfcc33205d4cd.jpg
