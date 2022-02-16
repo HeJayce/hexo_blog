@@ -125,7 +125,7 @@ recommend:
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
 favicon: http://jaycehe.oss-accelerate.aliyuncs.com/medias/logo.png
-logo: /medias/logo.png
+logo: http://jaycehe.oss-accelerate.aliyuncs.com/medias/logo.png
 
 # The configuration of the second button in the home banner,
 # including the display name of the button, the font awesome icon, and the hyperlink to the button.
@@ -244,21 +244,21 @@ profile:
 myProjects:
   enable: true
   data:
-    hexo-theme-matery:
-      icon: fas fa-file-alt
+    study-database:
+      icon: fas fa-database
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: http://github.com/blinkfox/hexo-theme-matery
-      desc: 学习linux与mysql
-    Fenix:
-        icon: fas fa-database
+      url: https://github.com/HeJayce/study-database
+      desc: 数据库学习笔记，主要以mysql为主
+    linux-and-shel:
+        icon: fab fa-linux
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/fenix
-        desc: 学习shell脚本笔记
-    typora-vue-theme:
-        icon: fas fa-file-alt
+        url: https://github.com/HeJayce/linux-and-shell
+        desc: linux系统以及shell脚本
+    web_text:
+        icon: fab fa-html5
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/blinkfox/typora-vue-theme
-        desc: 学习web开发
+        url: https://github.com/HeJayce/web_text
+        desc: web开发入门，三剑客，vue，AJAX等
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
@@ -271,19 +271,19 @@ mySkills:
       percent: 50%
     JavaScript:
       background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
-      percent: 70%
+      percent: 20%
     HTML5:
       background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
-      percent: 80%
+      percent: 30%
     CSS:
       background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
-      percent: 70%
+      percent: 30%
     SQL:
       background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
-      percent: 90%
+      percent: 40%
     Shell:
       background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
-      percent: 75%
+      percent: 45%
 
 # config gallery of my photos in about page.
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
