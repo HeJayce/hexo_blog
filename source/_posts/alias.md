@@ -1,6 +1,7 @@
 ---
 title: alias的详解与运维
 date: 2022-02-14 00:35:16
+categories: 文章
 tags:
   - 运维
   - 服务器

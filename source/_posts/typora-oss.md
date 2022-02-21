@@ -3,7 +3,7 @@ title: 使用typora+阿里云oss打造博客写作平台
 date: 2022-02-02 21:29:17
 author: Jayce he
 top: true
-categories: 文章
+categories: 部署
 summary: 在github，markdown，web等文件中使用oss取代本地图片文件
 cover: http://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525690.png
 tags:

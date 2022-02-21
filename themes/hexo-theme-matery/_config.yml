@@ -247,17 +247,17 @@ myProjects:
     study-database:
       icon: fas fa-database
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: https://github.com/HeJayce/study-database
+      url: https://gitee.com/jaycehe/study-database
       desc: 数据库学习笔记，主要以mysql为主
     linux-and-shel:
         icon: fab fa-linux
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/HeJayce/linux-and-shell
+        url: https://gitee.com/jaycehe/shell
         desc: linux系统以及shell脚本
     web_text:
         icon: fab fa-html5
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/HeJayce/web_text
+        url: https://gitee.com/jaycehe/web_text
         desc: web开发入门，三剑客，vue，AJAX等
 
 # config my skills informations in about page.

@@ -1,6 +1,7 @@
 ---
 title: Jenkins安装
 date: 2022-02-05 14:16:50
+categories: 部署
 tags:
   - Jenkins
   - 阿里云
