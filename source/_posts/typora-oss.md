@@ -88,8 +88,8 @@ tags:
 
 ![image-20220202211414361](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202022114037.png)
 
-但一般会大大小小出现一些问题，随后会更新问题概述及解决方法，如果出现上传失败，请先检查oss配置，多半问题都出在PicGo的配置和 OSS配置上，自己排查不出来也可以联系我。
-
+但一般会大大小小出现一些问题，随后会更新问题概述及解决方法，如果出现上传失败，请先检查oss配置，多半问题都出在PicGo的配置和OSS配置上，结合日志和阿里云给出的报错提示 [OSS权限相关常见错误的排查方法
+](https://help.aliyun.com/document_detail/42777.html) 自己排查不出来也可以联系我。
 
 
 ## 使用方法
