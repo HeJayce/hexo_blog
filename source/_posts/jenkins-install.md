@@ -42,7 +42,7 @@ export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 ## 安装Jenkins
 
-- yum源导入
+### yum源导入
 
 ```shell
 #添加Yum源
@@ -61,7 +61,7 @@ yum install -y ca-certificates
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 ```
 
-- 安装
+### 安装
 
 ```shell
 yum install -y jenkins
@@ -70,6 +70,8 @@ yum install -y jenkins
 如果缺少daemonize，则同样yum安装daemonize
 
 
+
+### 配置
 
 访问IP+8080 端口即可访问Jenkins界面
 
@@ -104,4 +106,4 @@ firewall-cmd --reload
 
 URL可自愿修改
 
-![image-20220308144542253](C:\Users\EB\AppData\Roaming\Typora\typora-user-images\image-20220308144542253.png)
+![image-20220308144542253](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203081458412.png)
