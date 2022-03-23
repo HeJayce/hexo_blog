@@ -75,3 +75,11 @@ alias tf='tail -f'  #动态查看文件变化
 
 执行`source ~/.bashrc`
 
+
+
+## 安全删除
+
+```sh
+alias rm='saferm(){ /bin/cp -a $@ ~/backup;rm $@; };saferm $@'
+```
+
