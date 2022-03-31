@@ -101,4 +101,6 @@ flush privileges;
 
 
 
-centos一键部署脚本：[Rate limit · GitHub](https://github.com/HeJayce/linux-and-shell/blob/main/mysql_install.sh)，初来乍到，有错请指教，默认密码为`Abc123!@#`
+## centos一键部署脚本
+
+**[Rate limit · GitHub](https://github.com/HeJayce/linux-and-shell/blob/main/mysql/mysql_install.sh)，初来乍到，有错请指教，默认密码为`Abc123!@#`**
