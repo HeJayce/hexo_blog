@@ -19,9 +19,9 @@ menu:
   Contact:
     url: /contact
     icon: fas fa-comments
-  # Friends:
-  #   url: /friends
-  #   icon: fas fa-address-book
+#  Friends:
+#     url: /friends
+#     icon: fas fa-address-book
   # 二级菜单写法如下
   #Medias:
   #  icon: fas fa-list
@@ -440,8 +440,8 @@ googleAnalytics:
 # Add baidu analytics configuration
 # 添加 baidu Analytics 配置
 baiduAnalytics:
-  enable: false
-  id:
+  enable: true
+  id: 338366429089caf93de36cf9f14bb466
 
 # 百度搜索资源平台提交链接
 baiduPush: true
