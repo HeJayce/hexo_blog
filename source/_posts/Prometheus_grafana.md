@@ -1,10 +1,10 @@
 ---
-title: 使用grafana可视化仪表监控服务器数据和nginx吞吐
+title: 使用typora+阿里云oss打造博客写作平台
 date: 2022-02-02 21:29:17
 author: Jayce he
 categories: 部署
 summary: 使用grafana可视化仪表监控服务器数据和nginx吞吐
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204080939199.svg
+cover: http://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525690.png
 tags:
   - Prometheus
   - grafana
@@ -20,8 +20,6 @@ tags:
 
 Prometheus 服务端负责数据的收集，然后将数据推送至grafana进行前台展示，而如何用Prometheus 采集到服务器和Nginx的数据呢，这里就需要再引入两个工具，服务器数据采用NodeExporter进行采集，Nginx数据通过nginx-module-vts插件进行采集。
 
-## 准备工作
-
 为了服务器环境的整洁，此次监控都将采用docker容器，docker即简单又不影响服务器环境，越来越受欢迎。
 
 需要在docker上安装的有
@@ -33,7 +31,7 @@ prometheus    拉取并存储数据 ，node-exporter 收集内核公开的硬件
 
 ![image-20220404145449706](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220404145449706.png)
 
-监控nginx
+### 监控nginx
 
 ![image-20220404145734567](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220404145734567.png)
 
@@ -72,7 +70,7 @@ docker run -d --name prometheus -p 9090:9090 -v $PWD/prometheus:/etc/prometheus 
 
 然后访问`ip:9090`看看是否成功
 
-![image-20220404145617171](/Users/jayce/github/hexo_blog/source/_posts/Prometheus_grafana.assets/image-20220404145617171-9055485.png)
+![image-20220408105846841](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081058933.png)
 
 这里我用域名代替ip，以实际网络环境为准
 
@@ -124,7 +122,7 @@ targets：选择填prometheus的ip和端口，建议选择localhost或内网地�
 
 保存退出，重启prometheus
 
-```
+```sh
 docker restart prometheus
 ```
 
@@ -138,7 +136,7 @@ docker restart prometheus
 
 拉取镜像
 
-```shell
+```sh
 docker pull grafana/grafana
 ```
 
@@ -160,13 +158,13 @@ docker run -d --name=grafana -p 3000:3000 -v $PWD/grafana:/var/lib/grafana grafa
 
 
 
-监控nginx
+## 监控nginx配置
 
 监控nginx需要使用nginx-module-vts插件，而nginx-module-vts插件的添加又需要重新编译nginx，此方法适用于编译安装而非yum安装
 
 安装nginx-module-vts
 
-```
+```sh
 git clone git://github.com/vozlt/nginx-module-vts.git
 ```
 
@@ -194,7 +192,7 @@ make
 
 ![image-20220402135729259](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204021357475.png)
 
-```
+```nginx
 location /status {
         vhost_traffic_status_display;
         vhost_traffic_status_display_format html;
@@ -202,6 +200,18 @@ location /status {
 ```
 
 ![image-20220402135813113](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204021358160.png)
+
+修改prometheus配置文件，添加nginx模块
+
+```
+- job_name: 'nginx'
+    static_configs:
+    - targets: ['172.26.134.10:9013']
+      labels:
+         instance: nginx
+```
+
+保存并重启
 
 此时打开公网/内网地址，`/status`下即可显示nginx数据了
 
@@ -213,7 +223,7 @@ location /status {
 
 用nginx将上面的地址转换为prometheus的地址：
 
-```
+```nginx
 server {
         listen       9013 ;
         server_name  172.26.134.10;
@@ -237,7 +247,7 @@ prometheus配置文件添加，重启prometheus
          instance: nginx
 ```
 
-```
+```sh
 docker restart prometheus
 ```
 
@@ -245,13 +255,82 @@ docker restart prometheus
 
 ![image-20220402141739403](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204021417501.png)
 
+## 配置grafana
+
+有了数据源，接下来就是配置可视化仪表了
+
+打开grafana登录页面，默认用户名密码都是admin
+
+![image-20220408103615852](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081036547.png)
 
 
-## Grafana展示
 
-## 原理
+登录后会自动提示修改密码，也可以跳过
+
+![image-20220408103651978](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081036130.png)
+
+> 忘记密码操作：
+>
+> `find / -name "grafana.db"`
+>
+> `sqlite3  grafana.db`
+>
+> `.tables` **
+>
+>  `select * from user;` **
+>
+> `update user set password = '59acf18b94d7eb0694c61e60ce44c110c7a683ac6a8f09580d626f90f4a242000746579358d77dd9e570e83fa24faa88a8a6', salt = 'F3FAxVm33R' where login = 'admin';`
+>
+> `.exit`
+>
+> 重启grafana
+>
+> 密码和用户名都重置为admin
+
+修改即可
+
+#### 配置数据源
+
+进入主界面找到下图所示data sources
+
+![image-20220408103844156](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081038259.png)
+
+点击右边蓝色 add data source
+
+![image-20220408103949639](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081039713.png)
+
+选择第一个Prometheus源
+
+![image-20220408104007625](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081040727.png)
+
+填入`ip:9090`，其他可以不用管，点击最后的保存并测试
+
+![image-20220408104436874](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081044265.png)
+
+正确即出现下图标识：
+
+![image-20220408104713340](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081047438.png)
+
+#### 配置可视化
+
+导入一个模板，模板可以在此网站挑选[Dashboards | Grafana Labs](https://grafana.com/grafana/dashboards/)
+
+![image-20220408104801670](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081048748.png)
+
+选择好后，将模板代号填入即可
+
+![image-20220408105512736](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081055144.png)
+
+![image-20220408105531459](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081055551.png)
+
+导入成功后，配置好的模板会自动识别数据源，将数据进行展示，如果个别模块没有数据，可以手动配置数据
+
+![image-20220408105653310](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081056466.png)
+
+可在edit模块，选择数据源以及需要展示的数据
+
+![image-20220408105740337](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081057411.png)
 
 
 
-
-
+nginx同理，但组件需要手动配置数据
