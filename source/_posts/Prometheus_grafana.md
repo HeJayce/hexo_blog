@@ -1,10 +1,10 @@
 ---
-title: 使用typora+阿里云oss打造博客写作平台
+title: 使用grafana可视化仪表监控服务器数据和nginx吞吐
 date: 2022-02-02 21:29:17
 author: Jayce he
 categories: 部署
 summary: 使用grafana可视化仪表监控服务器数据和nginx吞吐
-cover: http://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525690.png
+img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204080939199.svg
 tags:
   - Prometheus
   - grafana
@@ -19,6 +19,8 @@ tags:
 ## 架构简介
 
 Prometheus 服务端负责数据的收集，然后将数据推送至grafana进行前台展示，而如何用Prometheus 采集到服务器和Nginx的数据呢，这里就需要再引入两个工具，服务器数据采用NodeExporter进行采集，Nginx数据通过nginx-module-vts插件进行采集。
+
+## 准备工作
 
 为了服务器环境的整洁，此次监控都将采用docker容器，docker即简单又不影响服务器环境，越来越受欢迎。
 
@@ -245,7 +247,9 @@ docker restart prometheus
 
 
 
+## Grafana展示
 
+## 原理
 
 
 

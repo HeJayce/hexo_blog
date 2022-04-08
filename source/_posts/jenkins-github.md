@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 部署
 summary: 在服务器部署Jenkins同步github代码
-# cover: http://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525690.png
+img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204080957906.jpeg
 tags:
   - Jenkins
   - github
