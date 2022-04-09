@@ -16,7 +16,7 @@ tags:
 
 
 
-## 架构简介
+
 
 Prometheus 服务端负责数据的收集，然后将数据推送至grafana进行前台展示，而如何用Prometheus 采集到服务器和Nginx的数据呢，这里就需要再引入两个工具，服务器数据采用NodeExporter进行采集，Nginx数据通过nginx-module-vts插件进行采集。
 
@@ -27,16 +27,8 @@ prometheus    拉取并存储数据 ，node-exporter 收集内核公开的硬件
 具体流程为 node-exporter对服务器进行取数，nginx-module-vts对nginx进行取数，prometheus进行数据统一管理，由prometheus 推送至grafana进行数据展示
 效果图：
 
-### 监控服务器
-
-![image-20220404145449706](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220404145449706.png)
-
-监控nginx
-
-![image-20220404145734567](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220404145734567.png)
-
-## 安装prometheus
-
+监控服务器
+安装prometheus
 直接拉取prometheus的镜像
 
 ```
@@ -70,7 +62,9 @@ docker run -d --name prometheus -p 9090:9090 -v $PWD/prometheus:/etc/prometheus 
 
 然后访问`ip:9090`看看是否成功
 
-![image-20220404145617171](/Users/jayce/github/hexo_blog/source/_posts/Prometheus_grafana.assets/image-20220404145617171-9055485.png)
+
+
+
 
 这里我用域名代替ip，以实际网络环境为准
 
@@ -82,11 +76,13 @@ docker run -d --name prometheus -p 9090:9090 -v $PWD/prometheus:/etc/prometheus 
 docker ps -a
 ```
 
-![image-20220404144850405](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220404144850405.png)
 
-## 安装node-exporter
 
-```sh
+
+
+安装node-exporter
+
+```
 docker pull prom/node-exporter
 ```
 
@@ -94,7 +90,7 @@ docker pull prom/node-exporter
 
  运行
 
-```shell
+```
 docker run -d --name node-exporter -p 9100:9100 -v "/proc:/host/proc:ro" -v "/sys:/host/sys:ro" -v "/:/rootfs:ro" --net="host" prom/node-exporter
 ```
 
@@ -104,7 +100,7 @@ docker run -d --name node-exporter -p 9100:9100 -v "/proc:/host/proc:ro" -v "/sy
 vim prometheus/prometheus.yml
 ```
 
-```properties
+```
 scrape_configs:
   - job_name: "prometheus"
     static_configs:
@@ -128,21 +124,21 @@ docker restart prometheus
 
 打开浏览器：
 
-![image-20220404145831640](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220404145831640.png)
 
 
 
-## 安装grafana
 
-拉取镜像
+安装grafana
 
 ```shell
 docker pull grafana/grafana
 ```
 
-```shell
- mkdir grafana
-```
+\# 拉取镜像
+
+ 
+
+mkdir grafana
 
 创建grafana目录
 
@@ -154,7 +150,7 @@ docker run -d --name=grafana -p 3000:3000 -v $PWD/grafana:/var/lib/grafana grafa
 
 打开浏览器
 
-![image-20220404150145690](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220404150145690.png)
+
 
 
 
