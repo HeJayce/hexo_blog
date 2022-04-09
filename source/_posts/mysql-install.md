@@ -3,7 +3,7 @@ title: mysql 在ubuntu和centos上的安装
 date: 2022-03-09 15:14:07
 author: Jayce he
 categories: 部署
-cover: http://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525690.png
+img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204080944267.jpeg
 tags:
 - mysql
 - 服务器

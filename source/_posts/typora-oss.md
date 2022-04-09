@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 部署
 summary: 在github，markdown，web等文件中使用oss取代本地图片文件
-cover: http://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525690.png
+img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204080945215.png
 tags:
   - Markdown
   - OSS

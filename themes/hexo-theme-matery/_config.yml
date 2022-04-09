@@ -235,7 +235,7 @@ snowdown:
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
   avatar: /medias/avatar.png
-  career: SRE
+  career: 运维工程师
   introduction: 
 
 # config my projects informations in about page.
