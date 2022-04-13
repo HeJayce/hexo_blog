@@ -16,7 +16,7 @@ tags:
 
 效果：
 
-![image-20220216013107482](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202160131561.png)
+![image-20220413234445593](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220413234445593.png)
 
 ## 简单说下jupyter notebook
 
@@ -30,7 +30,7 @@ iPython(Jupyter notebook)
 
 Python：
 
-![image-20220216012827342](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202160128853.png)
+![image-20220413234657376](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220413234657376.png)
 
 
 

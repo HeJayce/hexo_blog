@@ -130,7 +130,7 @@ docker restart prometheus
 
 打开浏览器：
 
-
+![image-20220413235210346](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220413235210346.png)
 
 
 
@@ -140,13 +140,11 @@ docker restart prometheus
 docker pull grafana/grafana
 ```
 
-\# 拉取镜像
-
- 
-
-mkdir grafana
-
 创建grafana目录
+
+```sh
+mkdir grafana
+```
 
 启动镜像
 
