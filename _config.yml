@@ -120,7 +120,7 @@ theme: hexo-theme-matery
 deploy:
   type: git
   repository: git@github.com:HeJayce/HeJayce.github.io.git
-  branch: master
+  branch: dev
 
 site:
   subtitle: Jayce he's Blog
