@@ -8,15 +8,90 @@ tags:
 使用hexo框架搭建个人博客已有2个多月，是时候写一篇部署步骤以及踩坑总结了
 为什么使用hexo
 
-安装环境
+## 安装环境
 
-模板选择
+### MAC
 
-关于markdown
+hexo可以直接通过npm进行安装
 
-服务器部署
+```
+npm install -g hexo-cli
+```
 
-https
+![image-20220427224941463](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427224941463.png)
+
+出现此报错命令前加sudo
+
+安装成功后，可以直接新建一个项目
+
+![image-20220427225043033](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427225043033.png)
+
+
+
+新建一个项目，并初始化，其中名字自定义	
+
+```
+hexo init blog_name
+```
+
+此时hexo会从github将框架拉到本地的项目名称文件夹下
+
+![image-20220427225351741](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427225351741.png)
+
+![image-20220427225423970](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427225423970.png)
+
+使用ide打开，我使用的是webstorm，根据个人喜好即可
+
+打开项目后，使用``npm install` 将package.json 中的包下载下来
+
+![image-20220427225734227](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427225734227.png)
+
+此时这个最简单的项目基本框架就算有了，生成一下静态文件，用浏览器看看吧
+
+```sh
+hexo generate  #生成静态文件   简写hexo g
+hexo server    #启动服务器    简写hexo s
+```
+
+![image-20220427230214814](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427230214814.png)
+
+打开[http://localhost:4000/](http://localhost:4000/)
+
+即可进入欢迎界面：
+
+![image-20220427230335376](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427230335376.png)
+
+
+
+接着我们在github上新建一个仓库，仓库的名字必须是`用户名.github.io`格式，比如![image-20220427231524340](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427231524340.png)
+
+
+
+
+
+
+
+
+
+## 模板选择
+
+在github中有许多开源的模板（主题）可供大家选择，大家也可自行百度，选择自己喜欢的模板。我选择的是[mater模板](https://github.com/blinkfox/hexo-theme-matery)，不同的模板有不同的配置，选择的时候需要仔细阅读开发者提供的使用说明
+
+![image-20220427230711782](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427230711782.png)
+
+将喜欢的模板下载下来后，放入themes 文件夹下，直接将整个文件夹放入就好
+
+![image-20220427231227399](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427231227399.png)
+
+
+
+## 关于markdown
+
+## 服务器部署
+
+
+
+## https
 
 设置https可以到阿里云申请免费的证书，每人有20个额度
 
@@ -34,11 +109,54 @@ https
 
 ![image-20220426113751817](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204261137893.png)
 
+注意你的域名需要添加到DNS解析当中
+
+创建好证书后，将申请好的证书下载下来，使用nginx代理就选择nginx证书
+
+![image-20220427223638482](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427223638482.png)
+
+下载下来后是两个文件
+
+![image-20220427223736666](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427223736666.png)
+
+进入服务器，打开nginx的配置，添加以下内容：
+
+```nginx
+server {
+        listen       443 ssl;
+        server_name  jayce.icu;
+        # ssl证书地址
+        ssl_certificate     /usr/local/nginx/cert/jayce.pem;  # pem文件的路径
+        ssl_certificate_key  /usr/local/nginx/cert/jayce.key; # key文件的路径
+
+        # ssl验证相关配置
+        ssl_session_timeout  5m;    #缓存有效期
+        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;    #加密算法
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;    #安全链接可选的加密协议
+        ssl_prefer_server_ciphers on;   #使用服务器端的首选算法
+        location / {
+            root /var/lib/jenkins/workspace/jayce_blog;
+            index index.html;
+        }
+
+}
+```
+
+其中将刚才下载的两个文件放入服务器，将配置文件中两个文件的路径改为实际路径，注意pem和key文件的位置
+
+ssl相关配置可以不用管，复制即可
+
+重载nginx，过几分钟后验证即可
+
+```sh
+nginx -s reload
+```
 
 
-个性化改装
 
-代码部署同步
+## 个性化改装
 
-git 分支
+## 代码部署同步
+
+## git 分支
 
