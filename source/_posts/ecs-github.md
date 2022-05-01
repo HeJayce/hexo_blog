@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 部署
 summary: 解决在阿里云等国内的服务器上从github上拉代码，但网络不通的情况
-cover: http://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525690.png
+img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/fuckgfw.jpeg
 tags:
   - 运维
   - 服务器

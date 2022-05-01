@@ -11,6 +11,7 @@ tags:
   - OSS
   - 阿里云
   - typora
+  - 博客
 ---
 # 使用typora+阿里云oss 打造博客写作平台
 
