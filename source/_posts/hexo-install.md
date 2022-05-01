@@ -10,9 +10,7 @@ tags:
 
 ## 安装环境
 
-### MAC
-
-hexo可以直接通过npm进行安装
+hexo可以直接通过npm进行安装，windows同理
 
 ```
 npm install -g hexo-cli
@@ -30,7 +28,7 @@ npm install -g hexo-cli
 
 新建一个项目，并初始化，其中名字自定义	
 
-```
+```sh
 hexo init blog_name
 ```
 
@@ -65,7 +63,7 @@ hexo server    #启动服务器    简写hexo s
 
 接着我们在github上新建一个仓库，仓库的名字必须是`用户名.github.io`格式，比如![image-20220427231524340](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427231524340.png)
 
-
+将静态网页部署在此仓库即可通过上面的域名进行访问。如果觉得github的网络不好也可以使用国内的gitee，操作方法一致。
 
 
 
@@ -83,11 +81,51 @@ hexo server    #启动服务器    简写hexo s
 
 ![image-20220427231227399](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427231227399.png)
 
+接着在`_config.yml`中找到theme ，将theme的参数改为模板名称，注意模板名称为文件夹名称，改完后重新生成文件并启动服务：
 
+```
+hexo cl
+hexo g
+hexo s
+```
+
+打开
 
 ## 关于markdown
 
+
+
 ## 服务器部署
+
+由于是静态网页，服务器部署起来非常简单，如果自己有服务器可以进行服务器部署，后续可增加可玩性。
+
+静态网页通过nginx即可完成，没有nginx的通过yum安装即可
+
+```sh
+yum install epel-release
+yum install -y nginx
+```
+
+将github上发布的代码克隆到服务器即可
+
+![image-20220428145145675](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204281451049.png)
+
+在nginx配置文件中修改成下面的配置，root填写项目文件夹地址
+
+```nginx
+server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            root  /root/HeJayce.github.io;
+            index index.html;
+        }
+}
+```
+
+改好别忘了重载nginx配置
+
+这时打开浏览器访问IP:80 或域名就会打开index.html，即你的主页
 
 
 
@@ -119,7 +157,7 @@ hexo server    #启动服务器    简写hexo s
 
 ![image-20220427223736666](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427223736666.png)
 
-进入服务器，打开nginx的配置，添加以下内容：
+进入服务器，打开nginx的配置，添加以下内容：
 
 ```nginx
 server {
@@ -144,6 +182,8 @@ server {
 
 其中将刚才下载的两个文件放入服务器，将配置文件中两个文件的路径改为实际路径，注意pem和key文件的位置
 
+server_name 填写你申请证书的地址
+
 ssl相关配置可以不用管，复制即可
 
 重载nginx，过几分钟后验证即可
@@ -152,11 +192,29 @@ ssl相关配置可以不用管，复制即可
 nginx -s reload
 ```
 
+强制http转https:
+
+```sh
+server {
+    listen 80;
+    server_name  jayce.icu  www.jayce.icu;
+    return 301 https://jayce.icu$request_uri;
+}
+```
+
 
 
 ## 个性化改装
 
 ## 代码部署同步
 
+使用jenkins实现服务器与github代码同步，本地部署到github后，服务器会自动拉取最新的代码
+
+[在服务器部署Jenkins同步github代码 | Jayce's Blog](https://jayce.icu/post/jenkins-github.html)
+
+
+
 ## git 分支
+
+需要多个版本的需求
 
