@@ -131,9 +131,16 @@
     </script>
     <% } %>
 
+<!--    <div id="backTop" class="top-scroll" style="display: none;">-->
+<!--        <a class="btn-floating btn-large waves-effect waves-light" href="#!">-->
+<!--            <i class="fas fa-arrow-up"></i>-->
+<!--        </a>-->
+<!--    </div>-->
+
     <!--腾讯兔小巢-->
     <% if (theme.tuxiaochao.enable) { %>
-        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
+        <div id="backTop" class="top-scroll" style="display: block; margin-bottom: 55px; ">
+<!--        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">-->
             <a title="提点意见？" href="https://support.qq.com/products/<%- theme.tuxiaochao.productId %>"><i class="fa fa-comments fa-3x"  aria-hidden="true"></i></a>
         </div>
     <%}%>
