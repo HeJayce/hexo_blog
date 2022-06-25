@@ -166,3 +166,18 @@ jupyter notebook --allow-root
 ![image-20220216100627203](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202161006258.png)
 
 ![image-20220216102155441](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202161021586.png)
+
+个性化定制：
+
+css文件地址：
+
+```
+/root/anaconda3/lib/python3.9/site-packages/notebook/static/custom
+```
+
+
+
+
+
+
+
