@@ -280,10 +280,10 @@ mySkills:
       percent: 30%
     SQL:
       background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
-      percent: 40%
+      percent: 60%
     Shell:
       background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
-      percent: 45%
+      percent: 65%
 
 # config gallery of my photos in about page.
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
@@ -434,8 +434,8 @@ busuanziStatistics:
 # Add google analytics configuration
 # 添加 Google Analytics 配置
 googleAnalytics:
-  enable: false
-  id:
+  enable: true
+  id: G-Q6KL9T97JW
 
 # Add baidu analytics configuration
 # 添加 baidu Analytics 配置

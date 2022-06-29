@@ -2,7 +2,7 @@
 title: 阿里云等国内服务器github加速
 date: 2022-01-31 15:24:52
 author: Jayce he
-top: true
+top: false
 categories: 部署
 summary: 解决在阿里云等国内的服务器上从github上拉代码，但网络不通的情况
 img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/fuckgfw.jpeg
