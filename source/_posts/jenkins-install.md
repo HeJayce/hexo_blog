@@ -3,7 +3,7 @@
 title: Jenkins安装
 date: 2022-02-05 14:16:50
 categories: 部署
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204080957906.jpeg
+img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202207121023935.svg
 tags:
   - Jenkins
   - 阿里云

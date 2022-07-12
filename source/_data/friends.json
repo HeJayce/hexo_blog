@@ -1,0 +1,19 @@
+[{
+  "avatar": "https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202207121033293.svg",
+  "name": "jenkins",
+  "introduction": "已部署的jenkins",
+  "url": "https://jenkins.jayce.icu/",
+  "title": "前往"
+}, {
+  "avatar": "https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202207121031335.svg",
+  "name": "grafana",
+  "introduction": "已部署的grafana",
+  "url": "https://grafana.jayce.icu",
+  "title": "前往"
+}, {
+  "avatar": "https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202207121031186.svg",
+  "name": "jupyter",
+  "introduction": "已部署的jupyter",
+  "url": "https://jupyter.jayce.icu/",
+  "title": "前往"
+}]
