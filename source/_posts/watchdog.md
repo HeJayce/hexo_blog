@@ -1,10 +1,12 @@
 ---
 title: 服务器简单的监控脚本
 date: 2022-04-08 11:08:14
+img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202208161500819.svg
 tags: 
  - shell
  - 服务器
  - Linux
+
 ---
 ## 服务器简单的监控脚本监控docker等进程
 

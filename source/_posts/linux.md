@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 笔记
 summary: linux学习笔记
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202206291622947.webp
+img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202208161455851.svg
 tags:
 - linux
 

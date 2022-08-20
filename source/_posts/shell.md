@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 笔记
 summary: shell学习笔记
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202207121046620.svg
+img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202208161457963.svg
 tags:
 - linux
 - shell

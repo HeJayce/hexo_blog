@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 笔记
 summary: mysql学习笔记
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204080944267.jpeg
+img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202208161458820.svg
 tags:
 - mysql
 ---

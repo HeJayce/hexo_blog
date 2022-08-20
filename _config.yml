@@ -5,17 +5,18 @@
 # Site
 title: Jayce's Blog
 subtitle: 'Jayce的运维小站'
-description: ''
-keywords:
+description: '只要一个人还有所追求，他就没有老。直到后悔取代了梦想，他才算老。'
+keywords: 'Jayce'
 author: Jayce he
 language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://HeJayce.github.io
+url: https://jayce.icu
 permalink: /post/:title.html
 permalink_defaults:
+root: /
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
