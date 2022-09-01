@@ -5,7 +5,7 @@ author: Jayce he
 top: false
 categories: 部署
 summary: 解决在阿里云等国内的服务器上从github上拉代码，但网络不通的情况
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/fuckgfw.jpeg
+img: https://oss.jayce.icu/fuckgfw.jpeg
 tags:
   - 运维
   - 服务器
@@ -45,7 +45,7 @@ bash install-release.sh
 systemctl start v2ray
 ```
 
-![image-20220129233139100](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201292331756.png)
+![image-20220129233139100](https://oss.jayce.icu/markdown/202201292331756.png)
 
 #### 修改配置文件
 
@@ -53,7 +53,7 @@ systemctl start v2ray
 
    方法：
 
-   ![image-20220129233337800](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201292333040.png)
+   ![image-20220129233337800](https://oss.jayce.icu/markdown/202201292333040.png)
 
 #### 重启v2ray
 
@@ -63,7 +63,7 @@ systemctl start v2ray
 /usr/local/bin/v2ray -test -config /usr/local/etc/v2ray/config.json
 ```
 
-![image-20220129233516568](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201292335792.png)
+![image-20220129233516568](https://oss.jayce.icu/markdown/202201292335792.png)
 
 检查端口是否通畅
 
@@ -71,7 +71,7 @@ systemctl start v2ray
 lsof -i:10809
 ```
 
-![image-20220129233619810](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201292336185.png)
+![image-20220129233619810](https://oss.jayce.icu/markdown/202201292336185.png)
 
 `lsof`没有命令的可yum install lsof
 
@@ -84,5 +84,5 @@ lsof -i:10809
 
 此时再克隆代码速度飞快
 
-![image-20220129233925182](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201292339343.png)
+![image-20220129233925182](https://oss.jayce.icu/markdown/202201292339343.png)
 

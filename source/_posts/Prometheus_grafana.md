@@ -4,7 +4,7 @@ date: 2022-02-02 21:29:17
 author: Jayce he
 categories: 部署
 summary: 使用grafana可视化仪表监控服务器数据和nginx吞吐
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202207121031335.svg
+img: https://oss.jayce.icu/markdown/202207121031335.svg
 tags:
   - Prometheus
   - grafana
@@ -29,11 +29,11 @@ prometheus    拉取并存储数据 ，node-exporter 收集内核公开的硬件
 
 ### 监控服务器
 
-![image-20220404145449706](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220404145449706.png)
+![image-20220404145449706](https://oss.jayce.icu/image-20220404145449706.png)
 
 ### 监控nginx
 
-![image-20220404145734567](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220404145734567.png)
+![image-20220404145734567](https://oss.jayce.icu/image-20220404145734567.png)
 
 ## 安装prometheus
 
@@ -70,7 +70,7 @@ docker run -d --name prometheus -p 9090:9090 -v $PWD/prometheus:/etc/prometheus 
 
 然后访问`ip:9090`看看是否成功
 
-![image-20220408105846841](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081058933.png)
+![image-20220408105846841](https://oss.jayce.icu/markdown/202204081058933.png)
 
 这里我用域名代替ip，以实际网络环境为准
 
@@ -130,7 +130,7 @@ docker restart prometheus
 
 打开浏览器：
 
-![image-20220413235210346](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220413235210346.png)
+![image-20220413235210346](https://oss.jayce.icu/image-20220413235210346.png)
 
 
 
@@ -186,11 +186,11 @@ make
 
 执行nginx -V，看看有没有nginx-module-vts参数
 
-![image-20220402135521016](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204021355092.png)
+![image-20220402135521016](https://oss.jayce.icu/markdown/202204021355092.png)
 
 此时打开nginx配置文件，添加监控接口
 
-![image-20220402135729259](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204021357475.png)
+![image-20220402135729259](https://oss.jayce.icu/markdown/202204021357475.png)
 
 ```nginx
 location /status {
@@ -199,7 +199,7 @@ location /status {
 }
 ```
 
-![image-20220402135813113](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204021358160.png)
+![image-20220402135813113](https://oss.jayce.icu/markdown/202204021358160.png)
 
 修改prometheus配置文件，添加nginx模块
 
@@ -215,11 +215,11 @@ location /status {
 
 此时打开公网/内网地址，`/status`下即可显示nginx数据了
 
-![image-20220402141230288](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204021412387.png)
+![image-20220402141230288](https://oss.jayce.icu/markdown/202204021412387.png)
 
 `/status/format/prometheus` :
 
-![image-20220402141427152](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204021414243.png)
+![image-20220402141427152](https://oss.jayce.icu/markdown/202204021414243.png)
 
 用nginx将上面的地址转换为prometheus的地址：
 
@@ -253,7 +253,7 @@ docker restart prometheus
 
 此时访问IP:9013/metrics ，就可以变成prometheus需要的类型了
 
-![image-20220402141739403](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204021417501.png)
+![image-20220402141739403](https://oss.jayce.icu/markdown/202204021417501.png)
 
 ## 配置grafana
 
@@ -261,13 +261,13 @@ docker restart prometheus
 
 打开grafana登录页面，默认用户名密码都是admin
 
-![image-20220408103615852](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081036547.png)
+![image-20220408103615852](https://oss.jayce.icu/markdown/202204081036547.png)
 
 
 
 登录后会自动提示修改密码，也可以跳过
 
-![image-20220408103651978](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081036130.png)
+![image-20220408103651978](https://oss.jayce.icu/markdown/202204081036130.png)
 
 > 忘记密码操作：
 >
@@ -293,43 +293,43 @@ docker restart prometheus
 
 进入主界面找到下图所示data sources
 
-![image-20220408103844156](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081038259.png)
+![image-20220408103844156](https://oss.jayce.icu/markdown/202204081038259.png)
 
 点击右边蓝色 add data source
 
-![image-20220408103949639](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081039713.png)
+![image-20220408103949639](https://oss.jayce.icu/markdown/202204081039713.png)
 
 选择第一个Prometheus源
 
-![image-20220408104007625](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081040727.png)
+![image-20220408104007625](https://oss.jayce.icu/markdown/202204081040727.png)
 
 填入`ip:9090`，其他可以不用管，点击最后的保存并测试
 
-![image-20220408104436874](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081044265.png)
+![image-20220408104436874](https://oss.jayce.icu/markdown/202204081044265.png)
 
 正确即出现下图标识：
 
-![image-20220408104713340](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081047438.png)
+![image-20220408104713340](https://oss.jayce.icu/markdown/202204081047438.png)
 
 #### 配置可视化
 
 导入一个模板，模板可以在此网站挑选[Dashboards | Grafana Labs](https://grafana.com/grafana/dashboards/)
 
-![image-20220408104801670](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081048748.png)
+![image-20220408104801670](https://oss.jayce.icu/markdown/202204081048748.png)
 
 选择好后，将模板代号填入即可
 
-![image-20220408105512736](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081055144.png)
+![image-20220408105512736](https://oss.jayce.icu/markdown/202204081055144.png)
 
-![image-20220408105531459](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081055551.png)
+![image-20220408105531459](https://oss.jayce.icu/markdown/202204081055551.png)
 
 导入成功后，配置好的模板会自动识别数据源，将数据进行展示，如果个别模块没有数据，可以手动配置数据
 
-![image-20220408105653310](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081056466.png)
+![image-20220408105653310](https://oss.jayce.icu/markdown/202204081056466.png)
 
 可在edit模块，选择数据源以及需要展示的数据
 
-![image-20220408105740337](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081057411.png)
+![image-20220408105740337](https://oss.jayce.icu/markdown/202204081057411.png)
 
 
 

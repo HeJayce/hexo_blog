@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 部署
 summary: 在github，markdown，web等文件中使用oss取代本地图片文件
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204080945215.png
+img: https://oss.jayce.icu/markdown/202204080945215.png
 tags:
   - Markdown
   - OSS
@@ -29,7 +29,7 @@ tags:
 
 阿里云oss价格参考
 
-![image-20210819143824267](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202108191438597.png)
+![image-20210819143824267](https://oss.jayce.icu/markdown/202108191438597.png)
 
 选择最便宜40G，存放图片完全够用。
 
@@ -45,13 +45,13 @@ tags:
 
 2. 创建Bucket，Bucket相当于仓库，是你将来要存放数据的地方
 
-   ![image-20210819144518089](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202108191445966.png)
+   ![image-20210819144518089](https://oss.jayce.icu/markdown/202108191445966.png)
 
 
 
 创建Bucket 
 
-![image-20210819144620800](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202022133051.png)
+![image-20210819144620800](https://oss.jayce.icu/markdown/202202022133051.png)
 
 
 
@@ -59,11 +59,11 @@ tags:
 
 我使用的图床软件是PicGo， 下载安装这里不多赘述，现在需要将oss的信息添加到PicGo 中，废话不多，直接上配置，打开配置文件，在阿里云的配置区域里，填写自己所买的accessKeyId和accessKeySecret，以及创建的bucket。
 
-![image-20220202210957291](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202022133067.png)
+![image-20220202210957291](https://oss.jayce.icu/markdown/202202022133067.png)
 
 记得在设置下面勾选阿里云oss
 
-![image-20220202211152739](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202022111401.png)
+![image-20220202211152739](https://oss.jayce.icu/markdown/202202022111401.png)
 
 ```
   "aliyun": {
@@ -83,11 +83,11 @@ tags:
 
 想要配置图床，先在偏好设置-图像
 
-![image-20220202210411391](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202022104031.png)
+![image-20220202210411391](https://oss.jayce.icu/markdown/202202022104031.png)
 
 把PicGo的路径添加进去，点击验证图片上传选项验证oss是否能正常上传，一般上传正常就会返回成功值
 
-![image-20220202211414361](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202022114037.png)
+![image-20220202211414361](https://oss.jayce.icu/markdown/202202022114037.png)
 
 但一般会大大小小出现一些问题，随后会更新问题概述及解决方法，如果出现上传失败，请先检查oss配置，多半问题都出在PicGo的配置和OSS配置上，结合日志和阿里云给出的报错提示 [OSS权限相关常见错误的排查方法
 ](https://help.aliyun.com/document_detail/42777.html) 自己排查不出来也可以联系我。
@@ -97,4 +97,4 @@ tags:
 
 如果想用oss代替本地图片，首先正常添加图片至markdown文件后，右键即可弹出上传图片选项，点击即可替换图片的本地路径为oss在线链接
 
-![image-20220202212256962](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202022122264.png)
+![image-20220202212256962](https://oss.jayce.icu/markdown/202202022122264.png)

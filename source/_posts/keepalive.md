@@ -41,13 +41,13 @@ TCP是一种通信的方式，**“请求”一词是事务上的概念**，HTTP
 
 这种一听就知道对TCP基本概念不清楚。下面是我通过wireshark抓取的一个TCP建立握手的过程。（命令行基本上用TCPdump,后面我们还会用这张图说明问题）:
 
-![img](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204071449977.webp)
+![img](https://oss.jayce.icu/markdown/202204071449977.webp)
 
 TCP抓包
 
 现在我看只要看前3行，这就是TCP三次握手的完整建立过程，第一个报文SYN从发起方发出，第二个报文SYN,ACK是从被连接方发出，第三个报文ACK确认对方的SYN，ACK已经收到，如下图：
 
-![img](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204071449953.webp)
+![img](https://oss.jayce.icu/markdown/202204071449953.webp)
 
 TCP建立连接过程
 
@@ -104,7 +104,7 @@ TCP连接建立之后，HTTP协议使用TCP传输HTTP协议的请求(Request)和
 
 
 
-![img](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204071449946.webp)
+![img](https://oss.jayce.icu/markdown/202204071449946.webp)
 
 HTTP请求
 

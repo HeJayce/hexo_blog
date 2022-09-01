@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 笔记
 summary: mysql学习笔记
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202208161458820.svg
+img: https://oss.jayce.icu/markdown/202208161458820.svg
 tags:
 - mysql
 ---
@@ -41,7 +41,7 @@ vim /etc/mysql/mysql.conf.d/mysqld.cnf
 
 将bind-address   = 127.0.0.1注释掉
 
-![image-20210721175850771](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525629.png)
+![image-20210721175850771](https://oss.jayce.icu/markdown/202109171525629.png)
 
 重启即可
 
@@ -89,7 +89,7 @@ systemctl status mysqld
 grep "A temporary password is generated" /var/log/mysqld.log|awk '{print $11}'
 ```
 
-![image-20220309150733851](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203091507458.png)
+![image-20220309150733851](https://oss.jayce.icu/markdown/202203091507458.png)
 
 使用命令登录数据库后，修改该默认密码，否则无法使用
 
@@ -570,7 +570,7 @@ SELECT name FROM person_tbl WHERE name REGEXP '[*mar]';
 
 > 加号可用于与字符匹配 1 次或多次。例如，`'bre+'` 匹配 bre 和 bree，但不匹配 br。
 
-![image-20220328170923052](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203281709030.png)
+![image-20220328170923052](https://oss.jayce.icu/markdown/202203281709030.png)
 
 意思就是刚好匹配还不行，必须前面多一个
 
@@ -591,7 +591,7 @@ SELECT name FROM person_tbl WHERE name REGEXP '[*mar]';
 SELECT * FROM runoob_test_tbl WHERE runoob_author REGEXP '[OB]';
 ```
 
-![image-20220328165035427](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203281650265.png)
+![image-20220328165035427](https://oss.jayce.icu/markdown/202203281650265.png)
 
 `[^...] `  负值字符集合。匹配未包含的任意字符。
 
@@ -601,7 +601,7 @@ SELECT * FROM runoob_test_tbl WHERE runoob_author REGEXP '[^RUNOOB]';
 
 结果：
 
-![image-20220328165604954](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203281656914.png)
+![image-20220328165604954](https://oss.jayce.icu/markdown/202203281656914.png)
 
 结果发现RUNOOB并没有出现，原因是`[^RUNOOB]`过滤掉了`RUNOOB`
 
@@ -632,7 +632,7 @@ SELECT * FROM runoob_test_tbl WHERE runoob_author REGEXP '[^RUNOOB]';
 SELECT 'Hern' REGEXP '[0-9]';
 ```
 
-![image-20220328164007959](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203281640805.png)
+![image-20220328164007959](https://oss.jayce.icu/markdown/202203281640805.png)
 
 
 
@@ -828,7 +828,7 @@ sql join用于将两个表结合起来
 
 下图展示了 LEFT JOIN、RIGHT JOIN、INNER JOIN、OUTER JOIN 相关的 7 种用法。
 
-[![img](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525432.png)](https://www.runoob.com/wp-content/uploads/2019/01/sql-join.png)
+[![img](https://oss.jayce.icu/markdown/202109171525432.png)](https://www.runoob.com/wp-content/uploads/2019/01/sql-join.png)
 
 
 
@@ -843,7 +843,7 @@ SELECT column_name FROM table1 JOIN table2 ON table1.column_name=table2.column_n
 
 INNER JOIN 与JOIN相同
 
-![image-20210723094810785](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525690.png)
+![image-20210723094810785](https://oss.jayce.icu/markdown/202109171525690.png)
 
 
 
@@ -853,7 +853,7 @@ INNER JOIN 与JOIN相同
 
 从左表返回所有的行，如果右表没有匹配，结果为NULL
 
-![image-20210725182757047](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202109171525903.png)
+![image-20210725182757047](https://oss.jayce.icu/markdown/202109171525903.png)
 
 #### RIGHT JOIN
 
@@ -1103,13 +1103,13 @@ CREATE VIEW view_name AS SELECT column_name(s) FROM table_name WHERE condition
 
 总职工：
 
-![image-20220412152203540](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204121522617.png)
+![image-20220412152203540](https://oss.jayce.icu/markdown/202204121522617.png)
 
 ```sql
 CREATE  VIEW sell AS  SELECT * FROM `EMP` WHERE JOB="销售员";
 ```
 
-![image-20220412152224544](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204121522615.png)
+![image-20220412152224544](https://oss.jayce.icu/markdown/202204121522615.png)
 
 ### 更新视图
 

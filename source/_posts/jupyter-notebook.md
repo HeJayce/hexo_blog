@@ -2,7 +2,7 @@
 title: 在服务器部署jupyter notebook，实现服务器环境运算
 date: 2022-02-16 00:38:48
 categories: 部署
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202208161501458.svg
+img: https://oss.jayce.icu/markdown/202208161501458.svg
 tags:
  - python
  - 服务器
@@ -16,7 +16,7 @@ tags:
 
 效果：
 
-![image-20220413234445593](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220413234445593.png)
+![image-20220413234445593](https://oss.jayce.icu/image-20220413234445593.png)
 
 ## 简单说下jupyter notebook
 
@@ -26,11 +26,11 @@ Jupyter notebook是一种 Web 应用，能让用户将说明文本、数学方�
 
 iPython(Jupyter notebook)
 
-![image-20220216010041321](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202160100134.png)
+![image-20220216010041321](https://oss.jayce.icu/markdown/202202160100134.png)
 
 Python：
 
-![image-20220413234657376](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220413234657376.png)
+![image-20220413234657376](https://oss.jayce.icu/image-20220413234657376.png)
 
 
 
@@ -46,9 +46,9 @@ Python：
 
 由于软件更新，地址可能出现失效，实际已官网提供为准。
 
-![image-20220216014226572](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202160142772.png)
+![image-20220216014226572](https://oss.jayce.icu/markdown/202202160142772.png)
 
-下载好脚本后，用scp`或`ftp`上传至服务器`，当然也可直接在服务器`wget`![image-20220216014144845](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202160141546.png)
+下载好脚本后，用scp`或`ftp`上传至服务器`，当然也可直接在服务器`wget`![image-20220216014144845](https://oss.jayce.icu/markdown/202202160141546.png)
 
 运行安装脚本:
 
@@ -74,13 +74,13 @@ export PATH=$PATH:/root/anaconda3/bin
 
 输入python3 ，看看环境：
 
-![image-20220216014727419](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202160147985.png)
+![image-20220216014727419](https://oss.jayce.icu/markdown/202202160147985.png)
 
 如果是上图这样，则不成功，系统调用了原装的python3.6
 
 执行python3.9，运行anaconda环境：
 
-![image-20220216014906051](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202160149595.png)
+![image-20220216014906051](https://oss.jayce.icu/markdown/202202160149595.png)
 
 多版本python的情况可以利用别名进行区分：
 
@@ -88,7 +88,7 @@ export PATH=$PATH:/root/anaconda3/bin
 alias python3=python3.9
 ```
 
-![image-20220216015210129](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202160152179.png)
+![image-20220216015210129](https://oss.jayce.icu/markdown/202202160152179.png)
 
  安装好anaconda和python环境后，需要对jupyter进行配置
 
@@ -99,11 +99,11 @@ from notebook.auth import passwd
 passwd()
 ```
 
-![image-20220216094836772](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202160948965.png)
+![image-20220216094836772](https://oss.jayce.icu/markdown/202202160948965.png)
 
 此时提示需要输入密码，设置一个进入jupyter notebook的密码，系统会输出一个sha1加密的字符串，这个要保存下来，后面要用
 
-![image-20220216095052523](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202160950884.png)
+![image-20220216095052523](https://oss.jayce.icu/markdown/202202160950884.png)
 
 
 
@@ -163,9 +163,9 @@ jupyter notebook --allow-root
 
 右上角new一个python3 ，此时会进入jupyter notebook编辑页面，尝试写一些代码，看看python和各类库是否正常
 
-![image-20220216100627203](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202161006258.png)
+![image-20220216100627203](https://oss.jayce.icu/markdown/202202161006258.png)
 
-![image-20220216102155441](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202202161021586.png)
+![image-20220216102155441](https://oss.jayce.icu/markdown/202202161021586.png)
 
 个性化定制：
 

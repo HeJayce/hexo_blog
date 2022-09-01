@@ -1,7 +1,7 @@
 ---
 title: 服务器简单的监控脚本
 date: 2022-04-08 11:08:14
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202208161500819.svg
+img: https://oss.jayce.icu/markdown/202208161500819.svg
 tags: 
  - shell
  - 服务器
@@ -16,7 +16,7 @@ tags:
 
 安装maix
 
-![image-20220408111516967](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081115382.png)
+![image-20220408111516967](https://oss.jayce.icu/markdown/202204081115382.png)
 
 关闭默认邮件服务器（centos7）
 
@@ -51,9 +51,9 @@ set nss-config-dir=/etc/pki/nssdb  ssl证书目录
 
 配置成功后测试一下：
 
-![image-20220408132759402](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081327730.png)
+![image-20220408132759402](https://oss.jayce.icu/markdown/202204081327730.png)
 
-![image-20220408132818714](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081328786.png)
+![image-20220408132818714](https://oss.jayce.icu/markdown/202204081328786.png)
 
 
 
@@ -65,7 +65,7 @@ set nss-config-dir=/etc/pki/nssdb  ssl证书目录
 docker ps -a
 ```
 
-![image-20220408133446902](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081334165.png)
+![image-20220408133446902](https://oss.jayce.icu/markdown/202204081334165.png)
 
 从status可知具体的状态，从此可进行判断进程状态，先来一个判断是否exit的
 
@@ -73,7 +73,7 @@ docker ps -a
 docker ps -a |grep Exited
 ```
 
-![image-20220408133617687](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081336789.png)
+![image-20220408133617687](https://oss.jayce.icu/markdown/202204081336789.png)
 
 当此命令有返回时，即有服务退出了，利用此特性，可以将退出的进程发送邮件给管理者
 
@@ -83,7 +83,7 @@ docker ps -a |grep Exited
 docker_images_status_exited=$(docker ps -a | grep Exited | awk '{print $NF}')
 ```
 
-![image-20220408134055200](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081340268.png)
+![image-20220408134055200](https://oss.jayce.icu/markdown/202204081340268.png)
 
 发送邮件：
 
@@ -98,7 +98,7 @@ fi
 
 实际运行：
 
-![image-20220408134442666](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204081344811.png)
+![image-20220408134442666](https://oss.jayce.icu/markdown/202204081344811.png)
 
 
 

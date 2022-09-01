@@ -124,8 +124,8 @@ recommend:
 
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
-favicon: http://jaycehe.oss-accelerate.aliyuncs.com/medias/logo.png
-logo: http://jaycehe.oss-accelerate.aliyuncs.com/medias/logo.png
+favicon: https://oss.jayce.icu/medias/logo.png
+logo: https://oss.jayce.icu/medias/logo.png
 
 # The configuration of the second button in the home banner,
 # including the display name of the button, the font awesome icon, and the hyperlink to the button.
@@ -170,8 +170,8 @@ code:
 reward:
   enable: true
   title: 你的赏识是我前进的动力
-  wechat: http://jaycehe.oss-accelerate.aliyuncs.com/medias/20220202_064935425_iOS.jpg
-  alipay: http://jaycehe.oss-accelerate.aliyuncs.com/medias/20220202_064923692_iOS.jpg
+  wechat: https://oss.jayce.icu/medias/20220202_064935425_iOS.jpg
+  alipay: https://oss.jayce.icu/medias/20220202_064923692_iOS.jpg
 
 # Whether to activate the copyright information of the blog and author when copying the post content.
 # minCharNumber: Approve copyright information by copying at least how many characters.
@@ -511,31 +511,31 @@ libs:
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages:
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/0.jpg
-# http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/0.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/1.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/2.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/3.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/4.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/5.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/6.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/7.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/8.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/9.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/10.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/11.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/12.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/13.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/14.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/15.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/16.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/17.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/18.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/19.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/20.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/21.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/22.jpg
-- http://jaycehe.oss-accelerate.aliyuncs.com/featureimages/23.jpg
+- https://oss.jayce.icu/featureimages/0.jpg
+# https://oss.jayce.icu/featureimages/0.jpg
+- https://oss.jayce.icu/featureimages/1.jpg
+- https://oss.jayce.icu/featureimages/2.jpg
+- https://oss.jayce.icu/featureimages/3.jpg
+- https://oss.jayce.icu/featureimages/4.jpg
+- https://oss.jayce.icu/featureimages/5.jpg
+- https://oss.jayce.icu/featureimages/6.jpg
+- https://oss.jayce.icu/featureimages/7.jpg
+- https://oss.jayce.icu/featureimages/8.jpg
+- https://oss.jayce.icu/featureimages/9.jpg
+- https://oss.jayce.icu/featureimages/10.jpg
+- https://oss.jayce.icu/featureimages/11.jpg
+- https://oss.jayce.icu/featureimages/12.jpg
+- https://oss.jayce.icu/featureimages/13.jpg
+- https://oss.jayce.icu/featureimages/14.jpg
+- https://oss.jayce.icu/featureimages/15.jpg
+- https://oss.jayce.icu/featureimages/16.jpg
+- https://oss.jayce.icu/featureimages/17.jpg
+- https://oss.jayce.icu/featureimages/18.jpg
+- https://oss.jayce.icu/featureimages/19.jpg
+- https://oss.jayce.icu/featureimages/20.jpg
+- https://oss.jayce.icu/featureimages/21.jpg
+- https://oss.jayce.icu/featureimages/22.jpg
+- https://oss.jayce.icu/featureimages/23.jpg
 
 # default configs that the default policy for every articles/posts
 # default 配置文章的默认转载规则
@@ -654,7 +654,7 @@ jsDelivr:
 # 网站背景图
 background:
   enable: false
-  url: "http://jaycehe.oss-accelerate.aliyuncs.com/medias/galaxy.jpg"
+  url: "https://oss.jayce.icu/medias/galaxy.jpg"
 
 # 说说 https://artitalk.js.org/
 artitalk:

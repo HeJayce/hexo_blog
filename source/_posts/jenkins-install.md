@@ -3,7 +3,7 @@
 title: Jenkins安装
 date: 2022-02-05 14:16:50
 categories: 部署
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202207121023935.svg
+img: https://oss.jayce.icu/markdown/202207121023935.svg
 tags:
   - Jenkins
   - 阿里云
@@ -76,7 +76,7 @@ yum install -y jenkins
 
 访问IP+8080 端口即可访问Jenkins界面
 
-![image-20220308142711995](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203081427668.png)
+![image-20220308142711995](https://oss.jayce.icu/markdown/202203081427668.png)
 
 如果不能访问请检查防火墙，添加8080端口
 
@@ -89,22 +89,22 @@ firewall-cmd --reload
 
 第一次打开需要解锁Jenkins，查看web端提示的密码文件
 
-![image-20220308142939118](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203081429423.png)
+![image-20220308142939118](https://oss.jayce.icu/markdown/202203081429423.png)
 
 将此行密码复制进去即可
 
 接着选择安装推荐的插件
 
-![image-20220308143042461](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203081430531.png)
+![image-20220308143042461](https://oss.jayce.icu/markdown/202203081430531.png)
 
 等待即可
 
-![image-20220308143106111](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203081431177.png)
+![image-20220308143106111](https://oss.jayce.icu/markdown/202203081431177.png)
 
 创建管理员
 
-![image-20220308144503922](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203081445918.png)
+![image-20220308144503922](https://oss.jayce.icu/markdown/202203081445918.png)
 
 URL可自愿修改
 
-![image-20220308144542253](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203081458412.png)
+![image-20220308144542253](https://oss.jayce.icu/markdown/202203081458412.png)

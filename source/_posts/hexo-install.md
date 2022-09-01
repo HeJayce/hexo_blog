@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 部署
 summary: 使用hexo框架搭建个人博客
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/20220501170040.png
+img: https://oss.jayce.icu/20220501170040.png
 tags:
  - 服务器
  - github
@@ -27,13 +27,13 @@ hexo可以直接通过npm进行安装，windows同理
 npm install -g hexo-cli
 ```
 
-![image-20220427224941463](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427224941463.png)
+![image-20220427224941463](https://oss.jayce.icu/image-20220427224941463.png)
 
 出现此报错命令前加sudo
 
 安装成功后，可以直接新建一个项目
 
-![image-20220427225043033](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427225043033.png)
+![image-20220427225043033](https://oss.jayce.icu/image-20220427225043033.png)
 
 
 
@@ -45,15 +45,15 @@ hexo init blog_name
 
 此时hexo会从github将框架拉到本地的项目名称文件夹下
 
-![image-20220427225351741](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427225351741.png)
+![image-20220427225351741](https://oss.jayce.icu/image-20220427225351741.png)
 
-![image-20220427225423970](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427225423970.png)
+![image-20220427225423970](https://oss.jayce.icu/image-20220427225423970.png)
 
 使用ide打开，我使用的是webstorm，根据个人喜好即可
 
 打开项目后，使用``npm install` 将package.json 中的包下载下来
 
-![image-20220427225734227](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427225734227.png)
+![image-20220427225734227](https://oss.jayce.icu/image-20220427225734227.png)
 
 此时这个最简单的项目基本框架就算有了，生成一下静态文件，用浏览器看看吧
 
@@ -62,17 +62,17 @@ hexo generate  #生成静态文件   简写hexo g
 hexo server    #启动服务器    简写hexo s
 ```
 
-![image-20220427230214814](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427230214814.png)
+![image-20220427230214814](https://oss.jayce.icu/image-20220427230214814.png)
 
 打开[http://localhost:4000/](http://localhost:4000/)
 
 即可进入欢迎界面：
 
-![image-20220427230335376](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427230335376.png)
+![image-20220427230335376](https://oss.jayce.icu/image-20220427230335376.png)
 
 
 
-接着我们在github上新建一个仓库，仓库的名字必须是`用户名.github.io`格式，比如![image-20220427231524340](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427231524340.png)
+接着我们在github上新建一个仓库，仓库的名字必须是`用户名.github.io`格式，比如![image-20220427231524340](https://oss.jayce.icu/image-20220427231524340.png)
 
 将静态网页部署在此仓库即可通过上面的域名进行访问。如果觉得github的网络不好也可以使用国内的gitee，操作方法一致。
 
@@ -103,11 +103,11 @@ deploy:
 
 在github中有许多开源的模板（主题）可供大家选择，大家也可自行百度，选择自己喜欢的模板。我选择的是[mater模板](https://github.com/blinkfox/hexo-theme-matery)，不同的模板有不同的配置，选择的时候需要仔细阅读开发者提供的使用说明
 
-![image-20220427230711782](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427230711782.png)
+![image-20220427230711782](https://oss.jayce.icu/image-20220427230711782.png)
 
 将喜欢的模板下载下来后，放入themes 文件夹下，直接将整个文件夹放入就好
 
-![image-20220427231227399](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427231227399.png)
+![image-20220427231227399](https://oss.jayce.icu/image-20220427231227399.png)
 
 接着在`_config.yml`中找到theme ，将theme的参数改为模板名称，注意模板名称为文件夹名称，改完后重新生成文件并启动服务：
 
@@ -119,11 +119,11 @@ hexo g
 hexo s
 ```
 
-![image-20220501161105372](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501161105372.png)
+![image-20220501161105372](https://oss.jayce.icu/image-20220501161105372.png)
 
 此时再打开localhost 4000端口，看看主题有没有配置成功
 
-![image-20220501161217056](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501161543955-20220501171717958.png)
+![image-20220501161217056](https://oss.jayce.icu/image-20220501161543955-20220501171717958.png)
 
 
 
@@ -135,13 +135,13 @@ hexo s
 hexo new post [blog_name]
 ```
 
-![image-20220501161543955](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501161543955-20220501171717958.png)
+![image-20220501161543955](https://oss.jayce.icu/image-20220501161543955-20220501171717958.png)
 
-![image-20220501162931117](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501162931117-20220501171718190.png)
+![image-20220501162931117](https://oss.jayce.icu/image-20220501162931117-20220501171718190.png)
 
 此时就可以编写了，随便写点内容，看看有没有发布吧。编写好后按照上面的方法生成静态文件，再次打开localhost 4000 ，看看有无文章
 
-![image-20220501163000610](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501163000610.png) ![image-20220501163019437](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501163019437.png)
+![image-20220501163000610](https://oss.jayce.icu/image-20220501163000610.png) ![image-20220501163019437](https://oss.jayce.icu/image-20220501163019437.png)
 
 
 
@@ -158,7 +158,7 @@ yum install -y nginx
 
 将github上发布的代码克隆到服务器即可
 
-![image-20220428145145675](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204281451049.png)
+![image-20220428145145675](https://oss.jayce.icu/markdown/202204281451049.png)
 
 在nginx配置文件中修改成下面的配置，root填写项目文件夹地址
 
@@ -183,29 +183,29 @@ server {
 
 设置https可以到阿里云申请免费的证书，每人有20个额度
 
-![image-20220426113211531](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204261132101.png)
+![image-20220426113211531](https://oss.jayce.icu/markdown/202204261132101.png)
 
 
 
-![image-20220426113304547](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204261133715.png)
+![image-20220426113304547](https://oss.jayce.icu/markdown/202204261133715.png)
 
 购买完成后，进入ssl证书管理台，选择免费证书
 
-![image-20220426113400984](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204261134061.png)
+![image-20220426113400984](https://oss.jayce.icu/markdown/202204261134061.png)
 
 点击创建证书，会在列表里新建一个待申请证书，点击右边证书申请，填写你的域名以及信息，CSR选择系统生成
 
-![image-20220426113751817](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204261137893.png)
+![image-20220426113751817](https://oss.jayce.icu/markdown/202204261137893.png)
 
 注意你的域名需要添加到DNS解析当中
 
 创建好证书后，将申请好的证书下载下来，使用nginx代理就选择nginx证书
 
-![image-20220427223638482](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427223638482.png)
+![image-20220427223638482](https://oss.jayce.icu/image-20220427223638482.png)
 
 下载下来后是两个文件
 
-![image-20220427223736666](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220427223736666.png)
+![image-20220427223736666](https://oss.jayce.icu/image-20220427223736666.png)
 
 进入服务器，打开nginx的配置，添加以下内容：
 
@@ -262,25 +262,25 @@ server {
 
 我想修改原来模板的导航栏渐变颜色
 
-![image-20220501163715336](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501163715336.png)
+![image-20220501163715336](https://oss.jayce.icu/image-20220501163715336.png)
 
 打开F12，看哪个文件定义了标题栏的颜色
 
-<img src="https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501163956503.png" alt="image-20220501163956503" style="zoom: 200%;" />
+<img src="https://oss.jayce.icu/image-20220501163956503.png" alt="image-20220501163956503" style="zoom: 200%;" />
 
 从开发者模式可得，`matery.css`下面的代码是修改背景渐变颜色的
 
-![image-20220501164233110](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501164233110.png)
+![image-20220501164233110](https://oss.jayce.icu/image-20220501164233110.png)
 
 找到该文件，并自行修改
 
-![image-20220501164407058](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501164407058.png)
+![image-20220501164407058](https://oss.jayce.icu/image-20220501164407058.png)
 
 
 
 再看看页面，颜色就变了
 
-![image-20220501164451931](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501164451931.png)
+![image-20220501164451931](https://oss.jayce.icu/image-20220501164451931.png)
 
 
 
@@ -298,9 +298,9 @@ server {
 
 有多个版本的需求，可在IDE中创建新的分支，一个是github.io的分支，一个是该项目的分支，并且在config中将master分支改为你创建的分支名
 
-![image-20220501165147849](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501165147849.png)
+![image-20220501165147849](https://oss.jayce.icu/image-20220501165147849.png)
 
-![image-20220501165200028](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501165200028.png)
+![image-20220501165200028](https://oss.jayce.icu/image-20220501165200028.png)
 
-![image-20220501165230041](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/image-20220501165230041.png)
+![image-20220501165230041](https://oss.jayce.icu/image-20220501165230041.png)
 

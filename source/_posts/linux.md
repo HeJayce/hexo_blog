@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 笔记
 summary: linux学习笔记
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202208161455851.svg
+img: https://oss.jayce.icu/markdown/202208161455851.svg
 tags:
 - linux
 
@@ -241,7 +241,7 @@ shell 程序可搜寻的执行文件的路径定义在PATH环境变量中：
 ehco $PATH	
 ```
 
-[![image-20211204233557973](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201062321146.png)](https://camo.githubusercontent.com/72c3852f5994102902bc5cb38228ed4e502a885f25393052592d5dccf242b8de/68747470733a2f2f6a6179636568652e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f696d6167652d32303231313230343233333535373937332e706e67)
+[![image-20211204233557973](https://oss.jayce.icu/markdown/202201062321146.png)](https://camo.githubusercontent.com/72c3852f5994102902bc5cb38228ed4e502a885f25393052592d5dccf242b8de/68747470733a2f2f6a6179636568652e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f696d6167652d32303231313230343233333535373937332e706e67)
 
 自左至右依次查询，查到停止
 
@@ -249,7 +249,7 @@ shell搜寻代外部命令的路径结果会缓存至kv（key-value）存储中�
 
 可用命令`hash`命令查看
 
-[![image-20211204234259452](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201062322340.png)](https://camo.githubusercontent.com/d8a9732dce4431d1d85d8d7a018a54a899b541cbc78c7d0041ca23e07609f8ba/68747470733a2f2f6a6179636568652e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f696d6167652d32303231313230343233343235393435322e706e67)
+[![image-20211204234259452](https://oss.jayce.icu/markdown/202201062322340.png)](https://camo.githubusercontent.com/d8a9732dce4431d1d85d8d7a018a54a899b541cbc78c7d0041ca23e07609f8ba/68747470733a2f2f6a6179636568652e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f696d6167652d32303231313230343233343235393435322e706e67)
 
 **缓存副作用：**
 
@@ -546,7 +546,7 @@ q ，退出
 
 ` -l `以列表的形式
 
-​	![image-20220106224229321](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201062242168.png)
+​	![image-20220106224229321](https://oss.jayce.icu/markdown/202201062242168.png)
 
 ​	d：目录   -：文件   l：软连接
 
@@ -554,7 +554,7 @@ q ，退出
 
 `-d` 显示目录本身
 
-![image-20220106225118919](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201062251334.png)
+![image-20220106225118919](https://oss.jayce.icu/markdown/202201062251334.png)
 
 `-i` 查询文件号
 
@@ -646,7 +646,7 @@ touch "program files"
 
 ​	与cat相反的显示方法：`tac`
 
-​	![image-20220109102201471](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201091022043.png)
+​	![image-20220109102201471](https://oss.jayce.icu/markdown/202201091022043.png)
 
  配合 | more 按页显示文本内容
 
@@ -867,7 +867,7 @@ alias 可以为命令指定别名，所谓别名可以省去一长串命令的�
 
 直接使用命令`alias`可以查看所有的别名，如果想看某一命令，在alias后跟命令即可
 
-[![image-20220214152355809](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203171533539.png)](https://camo.githubusercontent.com/091bb781563ad6dfdefbd2a1dbf0c6836ac731ccce984e47230f15be1207a65d/68747470733a2f2f6a6179636568652e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f6d61726b646f776e2f3230323230323134313532333133382e706e67)
+[![image-20220214152355809](https://oss.jayce.icu/markdown/202203171533539.png)](https://camo.githubusercontent.com/091bb781563ad6dfdefbd2a1dbf0c6836ac731ccce984e47230f15be1207a65d/68747470733a2f2f6a6179636568652e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f6d61726b646f776e2f3230323230323134313532333133382e706e67)
 
 #### 创建别名
 
@@ -954,7 +954,7 @@ Linux top命令用于实时显示 process 的动态。
     
 
 
-![image-20220317161136480](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203171611873.png)
+![image-20220317161136480](https://oss.jayce.icu/markdown/202203171611873.png)
 
 #### 各行解析
 
@@ -1145,7 +1145,7 @@ curl -x 127.0.0.1:10809 https://jayce.icu
 grep -c ftp /etc/passwd
 ```
 
-![image-20220111161732807](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201111617840.png)
+![image-20220111161732807](https://oss.jayce.icu/markdown/202201111617840.png)
 
 ​	`-i`：不区分大小写 
 
@@ -1153,19 +1153,19 @@ grep -c ftp /etc/passwd
 grep -i FTP /etc/passwd
 ```
 
-![image-20220111161753629](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201111617063.png)
+![image-20220111161753629](https://oss.jayce.icu/markdown/202201111617063.png)
 
 ​	`-h`：查询多文件时不显示文件名。
 
-![image-20220111162602191](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201111626834.png)
+![image-20220111162602191](https://oss.jayce.icu/markdown/202201111626834.png)
 
 ​	`-l`：查询多文件时只输出包含匹配字符的文件名。
 
-![image-20220111162624906](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201111626791.png)
+![image-20220111162624906](https://oss.jayce.icu/markdown/202201111626791.png)
 
 ​	`-n`：显示匹配行及行号。
 
-![image-20220111162658201](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201111626789.png)
+![image-20220111162658201](https://oss.jayce.icu/markdown/202201111626789.png)
 
 ​	`-s`:   不显示不存在或无匹配文本的错误信息。
 
@@ -1179,11 +1179,11 @@ grep -B 2 bash oss.sh
 grep -C 3 bash oss.sh
 ```
 
-![image-20220111163121166](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201111631651.png)
+![image-20220111163121166](https://oss.jayce.icu/markdown/202201111631651.png)
 
-![image-20220111163355721](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201111633711.png)
+![image-20220111163355721](https://oss.jayce.icu/markdown/202201111633711.png)
 
-![image-20220111163437416](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201111634820.png)
+![image-20220111163437416](https://oss.jayce.icu/markdown/202201111634820.png)
 
 总结：
 
@@ -1243,11 +1243,11 @@ awk默认先读取第一行数据，如果
 ps -ef|grep sshd|awk 'BEGIN{printf "输出进程号\n"} {print $2}'
 ```
 
-![image-20220122172009408](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202201221720695.png)
+![image-20220122172009408](https://oss.jayce.icu/markdown/202201221720695.png)
 
 如果没有BEGIN，则输出为
 
-![image-20220317105404238](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203171054281.png)
+![image-20220317105404238](https://oss.jayce.icu/markdown/202203171054281.png)
 
 由此可见，BEGIN后的第一行是默认直接读取一次，不影响后面。
 
@@ -1269,7 +1269,7 @@ OFS：输出分隔符
 awk 'BEGIN{FS="|";OFS="|"}{print $1,$2,$3,$4}' informix.txt
 ```
 
-![image-20220317111917170](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203171119258.png)
+![image-20220317111917170](https://oss.jayce.icu/markdown/202203171119258.png)
 
 取出IP：
 
@@ -1327,11 +1327,11 @@ flag标记如下：
   sed -e 4a\newLine mysql.txt
   ```
 
-  ![image-20220317141941485](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203171419483.png)
+  ![image-20220317141941485](https://oss.jayce.icu/markdown/202203171419483.png)
 
   但是如果该文件不够4行，则：
 
-  ![image-20220317142110038](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203171421901.png)
+  ![image-20220317142110038](https://oss.jayce.icu/markdown/202203171421901.png)
 
 - **c** ：替换整行
 
@@ -1340,7 +1340,7 @@ flag标记如下：
   sed '3c\changed line' a.txt
   ```
 
-  ![image-20220317152219121](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203171522091.png)
+  ![image-20220317152219121](https://oss.jayce.icu/markdown/202203171522091.png)
 
 - **d** ：删除，因为是删除啊，所以 d 后面通常不接任何东东；
 
@@ -1396,7 +1396,7 @@ sed 's/a/z/2' a.txt
   命令将把1对应替换为7，2对应替换为8，3对应替换为9
 
 
-![image-20220317152759451](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203171528298.png)
+![image-20220317152759451](https://oss.jayce.icu/markdown/202203171528298.png)
 
 
 
@@ -1406,7 +1406,7 @@ sed 's/a/z/2' a.txt
 
 即进入vim时的模式，可以进行dd，i等操作
 
-![image-20220330144425674](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203301444832.png)
+![image-20220330144425674](https://oss.jayce.icu/markdown/202203301444832.png)
 
 常用命令：
 

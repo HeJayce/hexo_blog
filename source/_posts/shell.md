@@ -5,7 +5,7 @@ author: Jayce he
 top: true
 categories: 笔记
 summary: shell学习笔记
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202208161457963.svg
+img: https://oss.jayce.icu/markdown/202208161457963.svg
 tags:
 - linux
 - shell
@@ -1064,7 +1064,7 @@ wc -l oss.sh |awk '{print $1}'
 stat oss.sh
 ```
 
-![image-20220317101349673](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203171013997.png)
+![image-20220317101349673](https://oss.jayce.icu/markdown/202203171013997.png)
 
 stat 获取的信息比较多，同时不读取文件，性能也是最好的，如果需要某一数值，可以使用grep和awk进行过滤和分割，例如：
 
@@ -1072,7 +1072,7 @@ stat 获取的信息比较多，同时不读取文件，性能也是最好的，
 stat oss.sh |grep Size|awk '{print $2}'
 ```
 
-![image-20220317101559261](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203171016425.png)
+![image-20220317101559261](https://oss.jayce.icu/markdown/202203171016425.png)
 
 #### 读写执行
 
@@ -1131,7 +1131,7 @@ mysql -uroot -e "show databases;" -B -N
 
 其中-B参数取消了外部的竖线边框，-N参数出去了表头Database
 
-![image-20220322142447524](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203221424613.png)
+![image-20220322142447524](https://oss.jayce.icu/markdown/202203221424613.png)
 
 指定数据库查询：
 
@@ -1164,7 +1164,7 @@ password = *****
 
 此时不需要带上`-p`参数
 
-![image-20220629163921935](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202206291639294.png)
+![image-20220629163921935](https://oss.jayce.icu/markdown/202206291639294.png)
 
 如果不写入配置文件，把错误信息输出至dev null或文件中即可。
 

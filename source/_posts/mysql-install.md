@@ -3,7 +3,7 @@ title: mysql 在ubuntu和centos上的安装
 date: 2022-03-09 15:14:07
 author: Jayce he
 categories: 部署
-img: https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202204080944267.jpeg
+img: https://oss.jayce.icu/markdown/202204080944267.jpeg
 tags:
 - mysql
 - 服务器
@@ -32,7 +32,7 @@ vim /etc/mysql/mysql.conf.d/mysqld.cnf
 
 将bind-address   = 127.0.0.1注释掉
 
-![image-20210721175850771](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203091514554.png)
+![image-20210721175850771](https://oss.jayce.icu/markdown/202203091514554.png)
 
 重启即可
 
@@ -80,7 +80,7 @@ systemctl status mysqld
 grep "A temporary password is generated" /var/log/mysqld.log|awk '{print $11}'
 ```
 
-![image-20220309150733851](https://jaycehe.oss-cn-hangzhou.aliyuncs.com/markdown/202203091514491.png)
+![image-20220309150733851](https://oss.jayce.icu/markdown/202203091514491.png)
 
 使用命令登录数据库后，修改该默认密码，否则无法使用
 
