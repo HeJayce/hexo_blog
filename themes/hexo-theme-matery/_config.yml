@@ -636,7 +636,7 @@ banner:
 #ICP备案信息尾部显示
 icp:
   enable: true
-  url: http://www.beian.gov.cn/portal/recordQuery?token=0f80ddd9-1c53-46dd-bc31-fec1f477f175
+  url: https://beian.miit.gov.cn
   text: 宁ICP备2022000171号-1
 
 # CDN访问加速 

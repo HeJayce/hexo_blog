@@ -6,3 +6,4 @@ node_modules/
 .deploy*/
 public/
 themes/hexo-theme-matery/_config2.yml
+themes/hexo-theme-matery/_config.yml

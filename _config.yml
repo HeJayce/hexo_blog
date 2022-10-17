@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Jayce's Blog
-subtitle: 'Jayce的运维小站'
+title: 菜狗的生活记录
+subtitle: '菜狗的生活记录'
 description: '只要一个人还有所追求，他就没有老。直到后悔取代了梦想，他才算老。'
 keywords: 'Jayce'
 author: Jayce he
@@ -124,9 +124,9 @@ deploy:
   branch: master
 
 site:
-  subtitle: Jayce he's Blog
+  subtitle: 菜狗的生活记录
   author: Jayce
-  nick: Jayce的运维博客
+  nick: 菜狗的生活记录
   description: 试着加一点描述
   link: '/'
   language: en
