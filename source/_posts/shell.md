@@ -2,7 +2,6 @@
 title: shell学习笔记
 date: 2022-06-29 09:59:41
 author: Jayce he
-top: true
 categories: 笔记
 summary: shell学习笔记
 img: https://oss.jayce.icu/markdown/202208161457963.svg
