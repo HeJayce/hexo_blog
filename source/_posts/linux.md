@@ -1,8 +1,8 @@
 ---
-title: linux学习笔记
+title: LINUX学习笔记
 date: 2022-06-29 09:59:28
 author: Jayce he
-top: true
+top: false
 categories: 笔记
 summary: linux学习笔记
 img: https://oss.jayce.icu/markdown/202208161455851.svg

@@ -1,5 +1,5 @@
 ---
-title: shell学习笔记
+title: SHELL学习笔记
 date: 2022-06-29 09:59:41
 author: Jayce he
 categories: 笔记

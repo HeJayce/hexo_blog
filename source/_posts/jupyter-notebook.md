@@ -2,6 +2,7 @@
 title: 在服务器部署jupyter notebook，实现服务器环境运算
 date: 2022-02-16 00:38:48
 categories: 部署
+top: true
 img: https://oss.jayce.icu/markdown/202208161501458.svg
 tags:
  - python

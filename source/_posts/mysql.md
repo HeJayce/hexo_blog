@@ -1,5 +1,5 @@
 ---
-title: mysql
+title: 关于mysql数据库
 date: 2022-06-29 09:59:03
 tags:
 ---
