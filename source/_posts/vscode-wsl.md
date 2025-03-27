@@ -1,5 +1,5 @@
 ---
-title: 使用vscode在linux环境编写shell和python脚本
+title: windows环境使用vscode在linux环境编写shell和python脚本
 date: 2022-11-28 15:07:34
 author: Jayce he
 categories: 工具
@@ -17,7 +17,7 @@ tags:
 
 # 使用vscode在linux环境编写shell和python脚本
 对于经常编写脚本的人来说，编写shell一般都会在vim或记事本中，这样的方式没什么问题，但遇到需要测试的时候，就没有IDE那样的方便，而且使用IDE对shell的自动补全会让效率翻倍。
-此文章将讲述如何在vscode中配置Linux运行环境，让你run code即可看到输出。
+此文章将讲述如何在windows vscode中配置Linux运行环境，让你run code即可看到输出。
 
 ## 安装vscode
 安装vscode的方式在这就不做大篇的叙述了，百度vscode，下载安装包，点击下一步安装即可
@@ -35,8 +35,8 @@ WSL是一个在Windows 10\11上能够运行原生Linux二进制可执行文件�
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
-
 即可将WSL功能激活。
+
 接着在微软商店中挑一个你想用的Linux发行版
 
 ![image-20221128152641580](https://oss.jayce.icu/markdown/image-20221128152641580.png)
@@ -45,7 +45,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 ![image-20221128152909237](https://oss.jayce.icu/markdown/image-20221128152909237.png)
 
-这就是wsl Ubuntu的界面，当你正常设置好用户名和密码，出现这个节目后，说明你的WSL安装正常了![image-20221128152945459](https://oss.jayce.icu/markdown/image-20221128152945459.png)
+这就是wsl Ubuntu的界面，当你正常设置好用户名和密码，出现这个界面后，说明你的WSL安装正常了![image-20221128152945459](https://oss.jayce.icu/markdown/image-20221128152945459.png)
 
 
 

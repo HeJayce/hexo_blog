@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@arms/js-sdk@^1.8.36-beta.4":
+  "integrity" "sha512-B6ZbXI83ZFjsdc6sSchZ5Z44W6+HNwymPefA3dVDsfy4hPiUpcIZaCsmgJqYiBcQ3ZmVhD4C/QLvH7bhNI9Hxg=="
+  "resolved" "https://registry.npmmirror.com/@arms/js-sdk/-/js-sdk-1.8.36-beta.4.tgz"
+  "version" "1.8.36-beta.4"
+
 "@babel/parser@^7.16.4":
   "integrity" "sha512-7yJPvPV+ESz2IUTPbOL+YkIGyCqOyNIzdguKQuJGnH7bg1WTIifuM21YqokFt/THWh1AkCRn9IgoykTRCBVpzA=="
   "resolved" "https://registry.npmjs.org/@babel/parser/-/parser-7.17.3.tgz"

@@ -12,6 +12,7 @@
     "version": "6.3.0"
   },
   "dependencies": {
+    "@arms/js-sdk": "^1.8.36-beta.4",
     "gitalk": "^1.7.2",
     "hexo": "^6.3.0",
     "hexo-deployer-git": "^3.0.0",

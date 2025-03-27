@@ -399,6 +399,45 @@ revoke privileges on databasename.table to 'username'@'host';
 
 
 
+## Mysql数据类型
+
+### 整数类型
+
+整数类型一共有 5 种，包括 TINYINT、SMALLINT、MEDIUMINT、INT（INTEGER）和 BIGINT。
+
+| 整数类型    | 字节 | 有符号范围                               | 无符号范围             |
+| ----------- | ---- | ---------------------------------------- | ---------------------- |
+| TINYINT     | 1    | -128~127                                 | 0~255                  |
+| SMALLINT    | 2    | -32768~32767                             | 0~65535                |
+| MEDIUMINT   | 3    | -8388608~8388607                         | 0~16777215             |
+| INT/INTEGER | 4    | -2147483648~2147483647                   | 0~4294967295           |
+| BIGINT      | 8    | -9223372036854775808~9223372036854775807 | 0~18446744073709551615 |
+
+参数：
+
+括号数值的取值范围是(0, 255)。例如，int(5)：当数据宽度小于5位的时候在数字前面需要用字符填满宽度。
+
+ZEROFILL 表示数字前面的字符宽度用0填充,（如果某列是ZEROFILL，那么MySQL会自动为当前列添加UNSIGNED属性）
+
+UNSIGNED表示无符号类型（非负）
+
+TINYINT有符号数和无符号数的取值范围分别为-128~ 127和0~255，由于负号占了一个数字位，因此TINYINT默认的显示宽度为4。同理，**其他整数类型的默认显示宽度与其有符号数的最小值的宽度相同**。
+
+
+
+### 应用场景
+
+（1）TINYINT ：一般用于枚举数据，比如系统设定取值范围很小且固定的场景。
+（2）SMALLINT ：可以用于较小范围的统计数据，比如统计工厂的固定资产库存数量等。
+（3）MEDIUMINT ：用于较大整数的计算，比如车站每日的客流量等。
+（4）INT、INTEGER ：取值范围足够大，一般情况下不用考虑超限问题，用得最多。比如商品编号。
+（5）BIGINT ：只有当你处理特别巨大的整数时才会用到。比如双十一的交易量、大型门户网站点击量、证券公司衍生产品持仓等。
+
+
+
+
+
+
 ## 数据库操作
 
 ### 查看数据库
@@ -643,15 +682,43 @@ ALTER TABLE Persons AUTO_INCREMENT=100
 
 ## 修改表
 
-### ALTER
+### 修改字段
 
-添加或删除列：
+请注意，修改字段可能会影响到已经存在的应用程序或查询，因此应该在进行此操作之前备份数据表。
+
+#### 新增
 
 ```
-alter table table_name drop colu
+ALTER TABLE table_name ADD column_name data_type;
 ```
 
+新增指定位置
 
+```sql
+ALTER TABLE table_name ADD column_name data_type AFTER existing_column;
+```
+
+#### 修改
+
+```sql
+ALTER TABLE table_name MODIFY column_name new_data_type;
+```
+
+其中，`table_name`是要修改的表名，`column_name`是要修改的字段名，`new_data_type`是新的数据类型。
+
+#### 重命名
+
+```sql
+ALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name;
+```
+
+#### 删除
+
+```sql
+ALTER TABLE table_name DROP column_name;
+```
+
+其中table_name是要修改的表名，column_name是要删除的字段名。
 
 ## 查看表结构
 
@@ -1318,7 +1385,7 @@ secure_file_priv 参数是只读参数，不能使用set global命令修改。
 语法：
 
 ```sql
-load data infile '/dic/dic/file' into table database_name. tablename fields terminated by '|'
+load data infile '/dic/dic/file' into table database_name.tablename fields terminated by '|'
 ```
 
 
@@ -1388,7 +1455,7 @@ WHERE condition
 
 - 全文索引
 
-  只有在MyISAM引擎上才能使用，只能在CHAR,VARCHAR,TEXT类型字段上使用全文索引，介绍了要求，说说什么是全文索引，就是在一堆文字中，通过其中的某个关键字等，就能找到该字段所属的记录行。
+  只有在**MyISAM**引擎上才能使用，只能在CHAR,VARCHAR,TEXT类型字段上使用全文索引，介绍了要求，说说什么是全文索引，就是在一堆文字中，通过其中的某个关键字等，就能找到该字段所属的记录行。
 
 
 

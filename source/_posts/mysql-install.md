@@ -101,6 +101,16 @@ flush privileges;
 
 
 
+## 离线部署
+
+使用下载好的压缩包解压安装
+
+首先新建一个mysql账户
+
+
+
+
+
 ## centos一键部署脚本
 
 **[Rate limit · GitHub](https://github.com/HeJayce/linux-and-shell/blob/main/mysql/mysql_install.sh)，初来乍到，有错请指教，默认密码为`Abc123!@#`**

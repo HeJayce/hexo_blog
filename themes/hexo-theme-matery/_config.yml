@@ -141,7 +141,7 @@ indexbtn:
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
   github:  https://github.com/HeJayce
-  email: hejayce@gmail.com
+  email: he@jayce.icu
   facebook: # https://www.facebook.com/xxx
   twitter: https://twitter.com/he_jayce
   qq: 462585775
@@ -434,7 +434,7 @@ busuanziStatistics:
 # Add google analytics configuration
 # 添加 Google Analytics 配置
 googleAnalytics:
-  enable: true
+  enable: false
   id: G-Q6KL9T97JW
 
 # Add baidu analytics configuration
@@ -442,6 +442,10 @@ googleAnalytics:
 baiduAnalytics:
   enable: true
   id: 338366429089caf93de36cf9f14bb466
+
+
+AliAnalytics:
+  enable: true
 
 # 百度搜索资源平台提交链接
 baiduPush: true
